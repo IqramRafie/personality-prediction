@@ -309,7 +309,7 @@ Streamlit App Building
 """
 
 st.write("""
-# Extrover vs Introvert Prediction App
+# Extrovert vs Introvert Prediction App
 
 The following app predicts either you are extrovert or introvert!
 """)
