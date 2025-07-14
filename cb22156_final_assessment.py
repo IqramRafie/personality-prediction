@@ -317,13 +317,13 @@ The following app predicts either you are extrovert or introvert!
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
-    time_spent_alone = st.sidebar.slider('Time_spent_Alone', 4.3, 7.9, 5.4)
-    stage_fear = st.sidebar.slider('Stage_fear', 2.0, 4.4, 3.4)
+    time_spent_alone = st.sidebar.slider('Time_spent_Alone (hrs)', 0, 11)
+    stage_fear = st.sidebar.radio('Stage_fear', [1, 0], captions=["Yes","No"])
     # social_event_attendance = st.sidebar.slider('Social_event_attendance', 1.0, 6.9, 1.3)
-    going_outside = st.sidebar.slider('Going_outside', 0.1, 2.5, 0.2)
-    drained_after_socializing = st.sidebar.slider('Drained_after_socializing', 0.1, 2.5, 0.2)
-    friends_circle_size = st.sidebar.slider(' Friends_circle_size', 0.1, 2.5, 0.2)
-    post_frequency = st.sidebar.slider('Post_frequency', 0.1, 2.5, 0.2)
+    going_outside = st.sidebar.slider('Going_outside', 0, 7)
+    drained_after_socializing = st.sidebar.radio('Drained_after_socializing', [1, 0], captions=["Yes", "No"])
+    friends_circle_size = st.sidebar.slider(' Friends_circle_size', 0, 15)
+    post_frequency = st.sidebar.slider('Post_frequency', 0, 10)
     data = {'Time_spent_Alone': time_spent_alone,
             'Stage_fear': stage_fear,
             # 'Social_event_attendance': social_event_attendance,
