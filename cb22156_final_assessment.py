@@ -28,7 +28,7 @@ from sklearn.preprocessing import StandardScaler
 
 """Descriptive Analysis"""
 
-file = '/content/personality_dataset.csv'
+file = 'personality_dataset.csv'
 
 df = pd.read_csv(file)
 
@@ -64,7 +64,6 @@ filtered_df.replace("", nan_value, inplace=True)
 
 filtered_df.dropna(how='all', axis=1, inplace=True)
 
-display(filtered_df)
 
 print(f"After filtering again: {len(filtered_df)}")
 
@@ -320,17 +319,17 @@ st.sidebar.header('User Input Parameters')
 def user_input_features():
     time_spent_alone = st.sidebar.slider('Time_spent_Alone', 4.3, 7.9, 5.4)
     stage_fear = st.sidebar.slider('Stage_fear', 2.0, 4.4, 3.4)
-    social_event_attendance = st.sidebar.slider('Social_event_attendance', 1.0, 6.9, 1.3)
+    # social_event_attendance = st.sidebar.slider('Social_event_attendance', 1.0, 6.9, 1.3)
     going_outside = st.sidebar.slider('Going_outside', 0.1, 2.5, 0.2)
     drained_after_socializing = st.sidebar.slider('Drained_after_socializing', 0.1, 2.5, 0.2)
-    # friends_circle_size = st.sidebar.slider(' Friends_circle_size', 0.1, 2.5, 0.2)
+    friends_circle_size = st.sidebar.slider(' Friends_circle_size', 0.1, 2.5, 0.2)
     post_frequency = st.sidebar.slider('Post_frequency', 0.1, 2.5, 0.2)
     data = {'Time_spent_Alone': time_spent_alone,
             'Stage_fear': stage_fear,
-            'Social_event_attendance': social_event_attendance,
+            # 'Social_event_attendance': social_event_attendance,
             'Going_outside': going_outside,
             'Drained_after_socializing': drained_after_socializing,
-
+            'Friends_circle_size': friends_circle_size,
             'Post_frequency': post_frequency}
     features = pd.DataFrame(data, index=[0])
     return features
