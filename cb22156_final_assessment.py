@@ -319,17 +319,17 @@ st.sidebar.header('User Input Parameters')
 def user_input_features():
     time_spent_alone = st.sidebar.slider('Time_spent_Alone (hrs)', 0, 11)
     stage_fear = st.sidebar.radio('Stage_fear', [1, 0], captions=["Yes","No"])
-    # social_event_attendance = st.sidebar.slider('Social_event_attendance', 1.0, 6.9, 1.3)
+    social_event_attendance = st.sidebar.slider('Social_event_attendance', 1.0, 6.9, 1.3)
     going_outside = st.sidebar.slider('Going_outside', 0, 7)
     drained_after_socializing = st.sidebar.radio('Drained_after_socializing', [1, 0], captions=["Yes", "No"])
-    friends_circle_size = st.sidebar.slider(' Friends_circle_size', 0, 15)
+    # friends_circle_size = st.sidebar.slider(' Friends_circle_size', 0, 15)
     post_frequency = st.sidebar.slider('Post_frequency', 0, 10)
     data = {'Time_spent_Alone': time_spent_alone,
             'Stage_fear': stage_fear,
-            # 'Social_event_attendance': social_event_attendance,
+            'Social_event_attendance': social_event_attendance,
             'Going_outside': going_outside,
             'Drained_after_socializing': drained_after_socializing,
-            'Friends_circle_size': friends_circle_size,
+            # 'Friends_circle_size': friends_circle_size,
             'Post_frequency': post_frequency}
     features = pd.DataFrame(data, index=[0])
     return features
