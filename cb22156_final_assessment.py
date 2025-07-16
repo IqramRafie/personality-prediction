@@ -28,6 +28,11 @@ from sklearn.metrics import confusion_matrix
 
 from sklearn.preprocessing import StandardScaler
 
+st.write("""
+# ON Maintenance
+Currently I'm changing the feature to measure therefore prediction is on hold
+""")
+
 """Descriptive Analysis"""
 
 file = 'personality_dataset.csv'
