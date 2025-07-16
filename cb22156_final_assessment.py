@@ -370,9 +370,9 @@ prediction_proba = rf_after.predict_proba(df)
 st.subheader('Class labels and their corresponding index number')
 st.write(rf_x_train_selected.columns)
 
-st.subheader('Prediction')
+st.subheader('Prediction (1: Extrovert, 0: Introvert)')
 st.write(prediction)
 
 
-st.subheader('Prediction Probability')
+st.subheader('Prediction Probability (%)')
 st.write(prediction_proba)
