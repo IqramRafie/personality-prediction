@@ -30,7 +30,7 @@ from sklearn.preprocessing import StandardScaler
 
 """Descriptive Analysis"""
 
-file = '/content/personality_dataset.csv'
+file = 'personality_dataset.csv'
 
 df = pd.read_csv(file)
 
