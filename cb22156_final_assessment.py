@@ -95,7 +95,7 @@ cleaned_df.replace("", nan_value, inplace=True)
 
 cleaned_df.dropna(how='all', axis=1, inplace=True)
 
-display(cleaned_df)
+# display(cleaned_df)
 
 print(f"After cleaning again: {len(cleaned_df)}")
 
